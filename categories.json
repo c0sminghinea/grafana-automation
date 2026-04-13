@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Product Defects",
+    "description": "Failures caused by application bugs",
+    "matchedStatuses": ["failed"]
+  },
+  {
+    "name": "Test Defects",
+    "description": "Failures caused by test infrastructure or broken locators",
+    "matchedStatuses": ["broken"]
+  },
+  {
+    "name": "Known Issues",
+    "description": "Tests expected to fail due to documented defects",
+    "matchedStatuses": ["skipped"]
+  }
+]
