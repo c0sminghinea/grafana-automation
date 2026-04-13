@@ -1,0 +1,7 @@
+INFO     tests.test_tc002_check_detail:test_tc002_check_detail.py:38 Testing Check ID: 1634808 | Job: Grafana Main Hostname DNS Resolution
+INFO     pages.checks_page:checks_page.py:40 Navigating to Checks page: /a/grafana-synthetic-monitoring-app/checks
+INFO     pages.checks_page:checks_page.py:46 Searching for: 'Grafana Main Hostname DNS Resolution'
+INFO     pages.checks_page:checks_page.py:82 Clicking 'View dashboard' for check 1634808
+INFO     pages.check_detail_page:check_detail_page.py:29 Waiting for detail page to mount
+INFO     pages.check_detail_page:check_detail_page.py:36 Asserting heading contains: 'Grafana Main Hostname DNS Resolution'
+INFO     pages.check_detail_page:check_detail_page.py:54 Probe dropdown options: ['NorthVirginia']
