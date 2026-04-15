@@ -175,7 +175,20 @@ The `conftest.py` discovers the SM datasource UID at runtime by querying `/api/d
 | All probes have checks assigned | TC-003 cannot execute | `pytest.skip` with BLOCKED status; escalation path documented |
 | Grafana UI upgrade changes selectors | Tests break | Selectors use roles/labels (not CSS classes); `playwright codegen` for quick updates |
 | Demo instance data changes between runs | Assertions fail | Tests compute expectations from live API data, never from constants |
-| Network latency causes timeouts | Flaky results | Playwright built-in defaults (30s navigation, 30s actions); 5s fast-fail click-retry in `click_view_dashboard_for_check`; TC-002 has `@pytest.mark.flaky(reruns=1)` for dashboard load timing |
+| Network latency causes timeouts | Flaky results | Playwright built-in defaults (30s navigation, 30s actions); 5s fast-fail click-retry in `click_view_dashboard_for_check`; TC-002 has `@pytest.mark.flaky(reruns=2)` for dashboard load timing |
+
+### Flaky Test Management
+
+Tests that interact with a shared public instance can fail for infrastructure reasons rather than product defects. The suite uses a tiered quarantine strategy to keep CI green:
+
+| Mechanism | When to use | Effect on CI |
+|---|---|---|
+| `@pytest.mark.flaky(reruns=N)` | Transient environment failures (slow loads, timeouts) | Auto-retries up to N times; CI passes if any attempt succeeds |
+| `pytest.xfail(reason=...)` | Known product defect with a tracked ID | CI reports `xfail`, not a failure |
+| `pytest.skip(reason=...)` | Missing preconditions (e.g., no unassigned probes) | CI reports `skipped` with a BLOCKED reason |
+| `pytest -m "not quarantine"` | Persistent flakes under investigation (future use) | Excludes quarantined tests from the main pipeline |
+
+Quarantined tests are never deleted — they remain in the suite as documentation and are re-enabled once the root cause is resolved.
 
 ## 7. Defect Tracking
 
