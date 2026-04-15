@@ -1,15 +1,15 @@
-INFO     tests.test_tc001_probe_filter:test_tc001_probe_filter.py:48 Selected probe: Frankfurt (display: 'Frankfurt', id=14) | expected checks: 3 [1634809, 1745864, 1745869]
+INFO     tests.test_tc001_probe_filter:test_tc001_probe_filter.py:48 Selected probe: CapeTown (display: 'Cape Town', id=757) | expected checks: 4 [1634846, 1729853, 1729854, 1729855]
 INFO     pages.checks_page:checks_page.py:40 Navigating to Checks page: /a/grafana-synthetic-monitoring-app/checks
-INFO     pages.checks_page:checks_page.py:52 Applying probe filter: 'Frankfurt'
+INFO     pages.checks_page:checks_page.py:52 Applying probe filter: 'Cape Town'
 INFO     pages.checks_page:checks_page.py:75 Clicking 'View dashboard' link at index 0
 INFO     pages.check_detail_page:check_detail_page.py:29 Waiting for detail page to mount
-INFO     pages.check_detail_page:check_detail_page.py:59 Asserting probe 'Frankfurt' in dropdown
+INFO     pages.check_detail_page:check_detail_page.py:59 Asserting probe 'CapeTown' in dropdown
 INFO     pages.checks_page:checks_page.py:150 Navigating back to checks list
 INFO     pages.checks_page:checks_page.py:75 Clicking 'View dashboard' link at index 1
 INFO     pages.check_detail_page:check_detail_page.py:29 Waiting for detail page to mount
-INFO     pages.check_detail_page:check_detail_page.py:59 Asserting probe 'Frankfurt' in dropdown
+INFO     pages.check_detail_page:check_detail_page.py:59 Asserting probe 'CapeTown' in dropdown
 INFO     pages.checks_page:checks_page.py:150 Navigating back to checks list
 INFO     pages.checks_page:checks_page.py:75 Clicking 'View dashboard' link at index 2
 INFO     pages.check_detail_page:check_detail_page.py:29 Waiting for detail page to mount
-INFO     pages.check_detail_page:check_detail_page.py:59 Asserting probe 'Frankfurt' in dropdown
+INFO     pages.check_detail_page:check_detail_page.py:59 Asserting probe 'CapeTown' in dropdown
 INFO     pages.checks_page:checks_page.py:150 Navigating back to checks list

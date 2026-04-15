@@ -1,15 +1,18 @@
-INFO     tests.test_tc001_probe_filter:test_tc001_probe_filter.py:48 Selected probe: NorthVirginia (display: 'North Virginia', id=856) | expected checks: 7 [1634584, 1634806, 1634807, 1634808, 1634809, 1634847, 1634870]
+INFO     conftest:conftest.py:101 SM datasource UID: LyLuS367k  (name: Synthetic Monitoring)
+INFO     conftest:conftest.py:113 Fetched 21 items from check/list?includeAlerts=true
+INFO     conftest:conftest.py:113 Fetched 22 items from probe/list
+INFO     tests.test_tc001_probe_filter:test_tc001_probe_filter.py:48 Selected probe: Calgary (display: 'Calgary', id=10273) | expected checks: 3 [1729853, 1729854, 1729855]
 INFO     pages.checks_page:checks_page.py:40 Navigating to Checks page: /a/grafana-synthetic-monitoring-app/checks
-INFO     pages.checks_page:checks_page.py:52 Applying probe filter: 'North Virginia'
+INFO     pages.checks_page:checks_page.py:52 Applying probe filter: 'Calgary'
 INFO     pages.checks_page:checks_page.py:75 Clicking 'View dashboard' link at index 0
 INFO     pages.check_detail_page:check_detail_page.py:29 Waiting for detail page to mount
-INFO     pages.check_detail_page:check_detail_page.py:59 Asserting probe 'NorthVirginia' in dropdown
+INFO     pages.check_detail_page:check_detail_page.py:59 Asserting probe 'Calgary' in dropdown
 INFO     pages.checks_page:checks_page.py:150 Navigating back to checks list
 INFO     pages.checks_page:checks_page.py:75 Clicking 'View dashboard' link at index 1
 INFO     pages.check_detail_page:check_detail_page.py:29 Waiting for detail page to mount
-INFO     pages.check_detail_page:check_detail_page.py:59 Asserting probe 'NorthVirginia' in dropdown
+INFO     pages.check_detail_page:check_detail_page.py:59 Asserting probe 'Calgary' in dropdown
 INFO     pages.checks_page:checks_page.py:150 Navigating back to checks list
 INFO     pages.checks_page:checks_page.py:75 Clicking 'View dashboard' link at index 2
 INFO     pages.check_detail_page:check_detail_page.py:29 Waiting for detail page to mount
-INFO     pages.check_detail_page:check_detail_page.py:59 Asserting probe 'NorthVirginia' in dropdown
+INFO     pages.check_detail_page:check_detail_page.py:59 Asserting probe 'Calgary' in dropdown
 INFO     pages.checks_page:checks_page.py:150 Navigating back to checks list

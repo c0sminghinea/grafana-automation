@@ -1,3 +1,0 @@
-INFO     tests.test_tc003_empty_probe:test_tc003_empty_probe.py:32 Selected zero-assignment probe: Montreal (display: 'Montreal', id=10272)
-INFO     pages.checks_page:checks_page.py:40 Navigating to Checks page: /a/grafana-synthetic-monitoring-app/checks
-INFO     pages.checks_page:checks_page.py:52 Applying probe filter: 'Montreal'
