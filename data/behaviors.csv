@@ -1,4 +1,4 @@
 "BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
-"0","","0","Probe Filter","0","1","Empty probe produces no-data state","0"
 "0","","0","Probe Filter","3","0","Filter checks by probe location","0"
+"0","","0","Probe Filter","0","1","Empty probe produces no-data state","0"
 "0","","0","Check Detail","1","0","View dashboard navigates to correct detail page","0"
