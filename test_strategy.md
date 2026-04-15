@@ -190,7 +190,32 @@ Tests that interact with a shared public instance can fail for infrastructure re
 
 Quarantined tests are never deleted — they remain in the suite as documentation and are re-enabled once the root cause is resolved.
 
-## 7. Defect Tracking
+## 7. Entry / Exit Criteria
+
+### Entry Criteria
+
+- Target Grafana instance is accessible (`BASE_URL` responds to `/api/health`).
+- SM datasource is configured and returns checks/probes via API.
+- Python 3.11+ and Playwright browsers installed (`playwright install`).
+- Dependencies installed (`pip install -r requirements.txt`).
+
+### Exit Criteria
+
+- All critical tests (TC-001, TC-002) pass.
+- No open P1/P2 defects without a documented workaround.
+- Known defects tracked as `xfail` with defect IDs.
+- Allure report generated with full artifact coverage.
+
+## 8. Requirements Traceability
+
+| Requirement | Test Case | Status |
+|---|---|---|
+| Filter checks by probe (location) | TC-001 | ✅ Automated |
+| Navigate to check detail page | TC-002 | ✅ Automated |
+| Empty-state UX for zero-result filter | TC-003 | ✅ Automated (partial — DEF-001 blocks empty message assertion) |
+| Cross-validate UI against API data | TC-001, TC-002 | ✅ Automated |
+
+## 9. Defect Tracking
 
 | ID | Summary | Status | Affected TC |
 |---|---|---|---|
